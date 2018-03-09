@@ -160,8 +160,9 @@ set(BUILDNAME
 include(CTest)
 enable_testing()
 
-# define a test
-add_test(unit ${PROJECT_BINARY_DIR}/unit_tests)
+# define tests
+add_test(unit1 ${PROJECT_BINARY_DIR}/unit_tests)
+add_test(unit2 ${PROJECT_BINARY_DIR}/unit_tests)
 
 # make install and cpack
 include(install_target)
