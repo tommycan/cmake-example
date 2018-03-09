@@ -2,7 +2,7 @@ find_package(Git)
 
 if(GIT_FOUND)
     execute_process(
-        COMMAND ${GIT_EXECUTABLE} rev-list --max-count=1 HEAD
+        COMMAND ${GIT_EXECUTABLE} -C ${CMAKE_SOURCE_DIR} rev-list --max-count=1 HEAD
         OUTPUT_VARIABLE GIT_REVISION
         ERROR_QUIET
         )
